@@ -8,18 +8,18 @@ const TransactionTable = ({ transactions }) => {
         <thead>
           <tr>
             <th>Date</th>
-            <th>Descriptions</th>
+            <th>Description</th>
             <th>Category</th>
             <th>Amount</th>
           </tr>
         </thead>
         <tbody>
           {transactions.map((transaction) => (
-              <tr key={transactions.id}>
-                <td>{transactions.date}</td>
-                <td> {transactions.description} </td>
-                <td> {transactions.category} </td>
-                <td> {transactions.amount} </td>
+              <tr key={transaction.id}>
+                <td>{transaction.date}</td>
+                <td> {transaction.description} </td>
+                <td> {transaction.category} </td>
+                <td> {transaction.amount} </td>
               </tr>
           ))}
         </tbody>

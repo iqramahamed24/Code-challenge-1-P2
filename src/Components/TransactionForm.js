@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const TransactionForm = ({ onAddTransaction }) => {
-  const { date, setNewDate } = useState(" ");
-  const [description, setDescription] = useState(" ");
-  const [category, setCategory] = useState(" ");
-  const [amount, setAmount] = useState(" ");
+  const [date, setDate] = useState("");
+  const [description, setDescription] = useState("");
+  const [category, setCategory] = useState("");
+  const [amount, setAmount] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,17 +24,17 @@ const TransactionForm = ({ onAddTransaction }) => {
   return (
     <div>
       <h2>Add New Transactions</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
-          <label>Date;</label>
+          <label>Date:</label>
           <input
             type="text"
             value={date}
-            onChange={(e) => setNewDate(e.target.value)}
+            onChange={(e) => setDate(e.target.value)}
           />
         </div>
         <div>
-          <label>Description</label>
+          <label>Description:</label>
           <input
             type="text"
             value={description}
@@ -42,7 +42,7 @@ const TransactionForm = ({ onAddTransaction }) => {
           />
         </div>
         <div>
-          <label>Category</label>
+          <label>Category:</label>
           <input
             type="text"
             value={category}
@@ -50,14 +50,14 @@ const TransactionForm = ({ onAddTransaction }) => {
           />
         </div>
         <div>
-          <label>Amount</label>
+          <label>Amount:</label>
           <input
             type="text"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
         </div>
-        <buttton type="submit">Add Transaction</buttton>
+        <button type="submit">Add Transaction</button>
       </form>
     </div>
   );

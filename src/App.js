@@ -8,7 +8,7 @@ const App = () => {
         <div className="App" >
         <TransactionForm/>
         <SearchButton/>
-        <TransactionTable/>
+     
 
         
         </div>
