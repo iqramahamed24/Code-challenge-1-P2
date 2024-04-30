@@ -1,6 +1,9 @@
 # Getting Started with Create React App
 
 The LIve link should be here 
+
+https://main--tangerine-monstera-7e8201.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
